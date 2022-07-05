@@ -1,12 +1,15 @@
 import 'dart:io';
 import 'dart:io' as io;
-import 'package:intl/intl.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+// ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
+// ignore: depend_on_referenced_packages
+import 'package:intl/intl.dart';
 
 import '../Home/home_screen.dart';
 
@@ -22,6 +25,7 @@ class ReportScreen extends StatefulWidget {
 }
 
 class _ReportScreenState extends State<ReportScreen> {
+  // ignore: avoid_init_to_null
   File? _imageFile = null;
   bool isLoading = false;
   bool status = false;

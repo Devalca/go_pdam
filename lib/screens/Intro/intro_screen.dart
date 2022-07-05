@@ -20,10 +20,10 @@ class _IntroScreenState extends State<IntroScreen> {
 
   @override
   void initState() {
-    super.initState();
-    Firebase.initializeApp().whenComplete(() {
-      print("Koneksi DB Berhasil!");
-    });
+    // Firebase.initializeApp().whenComplete(() {
+    //   print("Koneksi DB Berhasil!");
+    // });
+    Firebase.initializeApp();
     Timer(const Duration(seconds: 3), () {
       if (result != null) {
         Navigator.pushReplacement(
@@ -39,6 +39,7 @@ class _IntroScreenState extends State<IntroScreen> {
             ));
       }
     });
+    super.initState();
   }
 
   @override

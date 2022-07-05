@@ -3,6 +3,7 @@ import 'dart:io' as io;
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
 
 import 'package:image_picker/image_picker.dart';
@@ -145,12 +146,12 @@ class _SubScreenState extends State<SubScreen> {
                       padding: const EdgeInsets.all(20.0),
                       // ignore: deprecated_member_use
                       child: FlatButton(
+                        onPressed: pickImage,
                         child: const Icon(
                           Icons.add_a_photo,
                           color: Colors.blue,
                           size: 50,
                         ),
-                        onPressed: pickImage,
                       ),
                     ),
                     Padding(

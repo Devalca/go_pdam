@@ -151,8 +151,10 @@ class _BillsScreenState extends State<BillsScreen> {
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 Colors.lightBlue)),
                         onPressed: () async {
+                          // ignore: no_leading_underscores_for_local_identifiers
                           String? _harga;
                           var myInt = int.parse(meterController.text);
+                          // ignore: unnecessary_type_check
                           assert(myInt is int);
                           if (myInt <= int.parse(_meteran!) + 60) {
                             setState(() {

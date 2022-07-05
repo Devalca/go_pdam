@@ -1,11 +1,8 @@
-import 'dart:collection';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:go_pdam/main.dart';
 import 'package:go_pdam/screens/Bills/bills_screen.dart';
-import 'package:go_pdam/screens/Home/home_screen.dart';
 import 'package:go_pdam/screens/Profil/profil_screen.dart';
 import 'package:go_pdam/screens/Report/report_screen.dart';
 import 'package:go_pdam/screens/Sub/sub_screen.dart';
@@ -99,8 +96,10 @@ class _HomeBodyState extends State<HomeBody> {
                         child: ListTile(
                           leading: Image.network(lists[index]['gambar']),
                           title:
+                              // ignore: prefer_interpolation_to_compose_strings
                               Text("Jenis Keluhan: " + lists[index]['jenis']),
                           subtitle:
+                              // ignore: prefer_interpolation_to_compose_strings
                               Text("Keterangan: " + lists[index]['keluhan']),
                           trailing: lists[index]['status'] == "Pending" ||
                                   lists[index]['status'] == "Proses"
